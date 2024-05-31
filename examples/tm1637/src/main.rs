@@ -4,28 +4,28 @@
 use esp_backtrace as _;
 use esp_hal::{clock::ClockControl, delay::Delay, peripherals::Peripherals, prelude::*};
 
-#[entry]
-fn main() -> ! {
-    let peripherals = Peripherals::take();
-    let system = peripherals.SYSTEM.split();
 
-    let clocks = ClockControl::max(system.clock_control).freeze();
-    let delay = Delay::new(&clocks);
-
+#[main]
+async fn main(spawner: Spawner) {
     esp_println::logger::init_logger_from_env();
+    let peripherals = Peripherals::take();
+    let system = SystemControl::new(peripherals.SYSTEM);
+    let clocks = ClockControl::boot_defaults(system.clock_control).freeze();
 
-    let timer = esp_hal::systimer::SystemTimer::new(peripherals.SYSTIMER).alarm0;
-    let _init = esp_wifi::initialize(
-        esp_wifi::EspWifiInitFor::Wifi,
-        timer,
-        esp_hal::rng::Rng::new(peripherals.RNG),
-        system.radio_clock_control,
-        &clocks,
-    )
-    .unwrap();
+    embassy::init(&clocks, TimerGroup::new_async(peripherals.TIMG0, &clocks));
+    spawner.spawn(run()).ok();
 
     loop {
         log::info!("Hello world!");
-        delay.delay(500.millis());
+        Timer::after(Duration::from_millis(5_000)).await;
+    }
+}
+
+
+#[embassy_executor::task]
+async fn run() {
+    loop {
+        println!("Hello world from embassy using esp-hal-async!");
+        Timer::after(Duration::from_millis(1_000)).await;
     }
 }
