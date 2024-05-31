@@ -1,7 +1,7 @@
 {
     "version": 1,
     "editor": "wokwi",
-    "author": "sunwenming <645187582@qq.com>",
+    "author": "tushantong <645187582@qq.com>",
     "parts": [
         {
             "type": "board-esp32-c3-devkitm-1",
