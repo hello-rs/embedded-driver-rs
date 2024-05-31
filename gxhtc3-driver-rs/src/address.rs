@@ -1,9 +1,9 @@
-//! GXHTC3 device I2C address.
+//! The device I2C address.
 
 /// Default I2C address.
 const DEFAULT_ADDRESS: u8 = 0x70;
 
-/// GXHTC3 device I2C address.
+/// The device I2C address.
 #[repr(u8)]
 #[derive(Clone, Copy, Default)]
 #[cfg_attr(feature = "impl-defmt-format", derive(defmt::Format))]

@@ -1,6 +1,6 @@
-//! Register addresses for the `GXHTC3` device.
+//! Register addresses for the device.
 
-/// Register addresses for the `GXHTC3` device.
+/// Register addresses for the device.
 #[repr(u16)]
 #[cfg_attr(feature = "impl-defmt-format", derive(defmt::Format))]
 #[cfg_attr(feature = "impl-debug", derive(core::fmt::Debug))]

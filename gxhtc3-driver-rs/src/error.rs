@@ -1,6 +1,6 @@
-//! Error types for `GXHTC3` devices.
+//! Error types for the devices.
 
-/// Error type for `GXHTC3` devices.
+/// Error type for the devices.
 #[cfg_attr(feature = "impl-defmt-format", derive(defmt::Format))]
 #[cfg_attr(feature = "impl-debug", derive(core::fmt::Debug))]
 pub enum GXHTC3Error<I2CError> {
