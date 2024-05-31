@@ -1,0 +1,4 @@
+[workspace]
+members = ["gxhtc3-driver-rs"]
+exclude = ["examples/*"]
+resolver = "2"
