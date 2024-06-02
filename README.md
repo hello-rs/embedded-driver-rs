@@ -1,14 +1,12 @@
-# `embedded-driver-rs`
+# embedded-driver-rs
 
 `embedded-driver-rs` serves some platform-agnostic drivers using the [`embedded-hal`](https://crates.io/crates/embedded-hal) and [`embedded-hal-async`](https://crates.io/crates/embedded-hal-async) traits.
-(driver meaning library crates that let a target platform interface an external device like a digital
-sensor or a wireless transceiver).
 
 `embedded-driver-rs` can support any number of target platforms (e.g. Cortex-M microcontrollers, esp32 microcontrollers, embedded Linux, etc.).
 
 ## Drivers
 
-- [xx](xx)[crate.io] An xx.
+- [gxhtc3-driver-rs](../gxhtc3-driver-rs)[crate.io] An xx.
 
 ## License
 

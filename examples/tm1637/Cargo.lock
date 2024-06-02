@@ -120,6 +120,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "duplicate"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "de78e66ac9061e030587b2a2e75cc88f22304913c907b11307bca737141230cb"
+dependencies = [
+ "heck",
+ "proc-macro-error",
+]
+
+[[package]]
 name = "embassy-executor"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -261,6 +271,10 @@ checksum = "3ff09972d4073aa8c299395be75161d582e7629cd663171d62af73c8d50dba3f"
 dependencies = [
  "embedded-io",
 ]
+
+[[package]]
+name = "embedded-utils-rs"
+version = "0.1.0"
 
 [[package]]
 name = "enum-as-inner"
@@ -817,10 +831,25 @@ version = "0.1.0"
 dependencies = [
  "embassy-executor",
  "embassy-time",
+ "embedded-hal 1.0.0",
+ "embedded-hal-async",
+ "embedded-utils-rs",
  "esp-backtrace",
  "esp-hal",
  "esp-println",
  "log",
+ "tm1637-embedded-hal",
+]
+
+[[package]]
+name = "tm1637-embedded-hal"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a8fd4ad1021f08236ffed0cc421b69364074a12a5eaee68308a78c0805eea403"
+dependencies = [
+ "duplicate",
+ "embedded-hal 1.0.0",
+ "embedded-hal-async",
 ]
 
 [[package]]

@@ -1,4 +1,4 @@
-# `gxhtc3-driver-rs`
+# gxhtc3-driver-rs
 
 A platform-agnostic driver to interface with the `GXHTC3` (temperature and humidity sensor) using the [`embedded-hal`](https://crates.io/crates/embedded-hal) and [`embedded-hal-async`](https://crates.io/crates/embedded-hal-async) traits.
 

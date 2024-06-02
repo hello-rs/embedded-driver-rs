@@ -6,10 +6,8 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-
 embassy-executor = { version = "0.5.0", features = ["task-arena-size-40960"] }
 embassy-time = { version = "0.3.0", features = ["generic-queue-8"] }
-
 
 esp-backtrace = { version = "0.11.0", features = [
     "esp32c3",
@@ -26,6 +24,17 @@ esp-hal = { version = "0.17.0", features = [
 ] }
 esp-println = { version = "0.9.0", features = ["esp32c3", "log"] }
 log = { version = "0.4.20" }
+
+tm1637-embedded-hal = { version = "*", default-features = false, features = [
+    "async",
+    "demo",
+] }
+
+embedded-utils-rs = { path = "../../embedded-utils-rs", version = "0.1", features = [
+    "time",
+] }
+embedded-hal-async = { version = "1.0.0" }
+embedded-hal = { version = "1.0.0" }
 
 [profile.dev]
 # Rust debug is too slow. 
