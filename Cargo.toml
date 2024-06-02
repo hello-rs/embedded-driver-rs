@@ -1,4 +1,4 @@
 [workspace]
-members = ["gxhtc3-driver-rs"]
+members = ["gxhtc3", "qmc5883l"]
 exclude = ["examples"]
 resolver = "2"

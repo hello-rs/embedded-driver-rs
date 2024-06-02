@@ -8,4 +8,4 @@ mod error;
 mod register;
 
 pub use crate::address::Address;
-pub use crate::error::GXHTC3Error;
+pub use crate::error::Error;

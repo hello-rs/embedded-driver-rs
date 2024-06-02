@@ -1,6 +1,6 @@
-# gxhtc3-driver-rs
+# gxhtc3
 
-A platform-agnostic driver to interface with the `GXHTC3` (temperature and humidity sensor) using the [`embedded-hal`](https://crates.io/crates/embedded-hal) and [`embedded-hal-async`](https://crates.io/crates/embedded-hal-async) traits.
+A platform-agnostic driver to interface with the `GXHTC3` (temperature and humidity sensor).
 
 ## The device
 
@@ -18,13 +18,11 @@ The following features are available:
 
 The following crate [feature flags](https://doc.rust-lang.org/cargo/reference/features.html#the-features-section) are available:
 
-- `blocking`: enables blocking functionality.
 - `async`: enables asynchronous functionality.
 - `log`: enables debug logging using the `log` crate.
 - `defmt`: enables debug logging using the `defmt` crate.
 - `impl-debug`: implements `core::fmt::Debug` for structs and enums.
 - `impl-defmt-format`: implements `defmt::Format` for structs and enums.
-- `fuzz`: enables the `fuzz` module for fuzz testing.
 
 ## Usage
 

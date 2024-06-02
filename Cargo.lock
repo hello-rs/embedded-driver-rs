@@ -47,16 +47,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "duplicate"
-version = "1.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "de78e66ac9061e030587b2a2e75cc88f22304913c907b11307bca737141230cb"
-dependencies = [
- "heck",
- "proc-macro-error",
-]
-
-[[package]]
 name = "embedded-hal"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -72,22 +62,14 @@ dependencies = [
 ]
 
 [[package]]
-name = "gxhtc3-driver-rs"
+name = "gxhtc3"
 version = "0.1.0"
 dependencies = [
  "crc-any",
  "defmt",
- "duplicate",
- "embedded-hal",
  "embedded-hal-async",
  "log",
 ]
-
-[[package]]
-name = "heck"
-version = "0.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "95505c38b4572b2d910cecb0281560f54b440a19336cbbcb27bf6ce6adc6f5a8"
 
 [[package]]
 name = "log"
@@ -127,6 +109,10 @@ checksum = "ec96c6a92621310b51366f1e28d05ef11489516e93be030060e5fc12024a49d6"
 dependencies = [
  "unicode-ident",
 ]
+
+[[package]]
+name = "qmc5883l"
+version = "0.1.0"
 
 [[package]]
 name = "quote"
