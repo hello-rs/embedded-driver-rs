@@ -6,7 +6,7 @@ A platform-agnostic driver to interface with the `QMC5883L` (3-Axis Magnetic Sen
 
 ### Documentation:
 
-- [Datasheet](https://atta.szlcsc.com/upload/public/pdf/source/20230809/660E95CE3850F3D94BCF8D6A95359493.pdf)
+- [Datasheet](https://atta.szlcsc.com/upload/public/pdf/source/20201217/C976032_5B9A2F3901E175046CBA037B1F18A1F2.pdf)
 
 ## Features
 
@@ -18,13 +18,11 @@ The following features are available:
 
 The following crate [feature flags](https://doc.rust-lang.org/cargo/reference/features.html#the-features-section) are available:
 
-- `blocking`: enables blocking functionality.
 - `async`: enables asynchronous functionality.
 - `log`: enables debug logging using the `log` crate.
 - `defmt`: enables debug logging using the `defmt` crate.
 - `impl-debug`: implements `core::fmt::Debug` for structs and enums.
 - `impl-defmt-format`: implements `defmt::Format` for structs and enums.
-- `fuzz`: enables the `fuzz` module for fuzz testing.
 
 ## Usage
 
