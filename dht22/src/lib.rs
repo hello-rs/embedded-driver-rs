@@ -4,9 +4,9 @@
 #![deny(unsafe_code)]
 
 mod address;
+mod chip_info;
 mod device;
 mod error;
-mod register;
 
 pub use crate::device::*;
 pub use crate::error::DHT22Error;
