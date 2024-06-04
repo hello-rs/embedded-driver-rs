@@ -1,17 +1,17 @@
-# qmc5883l
+# dht22
 
-A platform-agnostic driver to interface with the `QMC5883L` (3-Axis Magnetic Sensor).
+A platform-agnostic driver to interface with the `DHT22` (temperature and humidity sensor).
 
 ## The device
 
 ### Documentation:
 
-[QMC5883L-Datasheet](https://atta.szlcsc.com/upload/public/pdf/source/20201217/C976032_5B9A2F3901E175046CBA037B1F18A1F2.pdf)
+[DHT22-Datasheet](https://atta.szlcsc.com/upload/public/pdf/source/20230523/7507864DBB8AF99FF82B5DD1568971DB.pdf)
 
 Useful info:
 
-- 5.4 Communication Bus Interface I2C and Its Addresses
-- 9 REGISTERS
+- 2.6、发送命令
+- 2.7、读取温湿度
 
 ## Features
 

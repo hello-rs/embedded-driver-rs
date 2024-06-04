@@ -9,4 +9,4 @@ mod error;
 mod register;
 
 pub use crate::device::*;
-pub use crate::error::QMC5883LError;
+pub use crate::error::DHT22Error;

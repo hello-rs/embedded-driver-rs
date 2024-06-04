@@ -47,6 +47,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "dht22"
+version = "0.1.0"
+dependencies = [
+ "defmt",
+ "embedded-hal-async",
+ "log",
+]
+
+[[package]]
 name = "embedded-hal"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
