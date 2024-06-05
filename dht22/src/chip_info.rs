@@ -35,3 +35,12 @@ pub enum Address {
     /// User-defined address.
     Other(u8),
 }
+
+impl From<Address> for u8 {
+    fn from(address: Address) -> u8 {
+        match address {
+            Address::Default => DEFAULT_ADDRESS,
+            Address::Other(addr) => addr,
+        }
+    }
+}

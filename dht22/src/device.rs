@@ -1,9 +1,8 @@
 //! Device definition and implementation.
 
 use crate::{
-    address::I2cAddress,
+    chip_info::{Address, Command},
     error::DHT22Error,
-    register::{ChipId, Register},
 };
 use embedded_hal_async::i2c::I2c;
 
@@ -23,14 +22,14 @@ where
     pub fn new(i2c: I2C) -> Self {
         Self {
             inner: DHT22 {
-                addr: I2cAddress::default(),
+                addr: Address::default(),
                 i2c,
             },
         }
     }
 
     /// Set the device address.
-    pub fn addr(mut self, addr: I2cAddress) -> Self {
+    pub fn addr(mut self, addr: Address) -> Self {
         self.inner.addr = addr;
         self
     }
@@ -59,7 +58,7 @@ where
 #[cfg_attr(feature = "impl-defmt-format", derive(defmt::Format))]
 #[cfg_attr(feature = "impl-debug", derive(core::fmt::Debug))]
 pub struct DHT22<I2C> {
-    addr: I2cAddress,
+    addr: Address,
     i2c: I2C,
 }
 impl<I2C> DHT22<I2C>
@@ -69,5 +68,14 @@ where
     /// Create a new builder.
     pub fn builder(i2c: I2C) -> DHT22Builder<I2C> {
         DHT22Builder::new(i2c)
+    }
+    /// Start a temperature and humidity measurement.
+    pub async fn start_measurement(&mut self) -> Result<(), DHT22Error<I2C::Error>> {
+        let mut data = [0u8; 2];
+
+        self.i2c
+            .write_read(self.addr.into(), &[Command::TempHumiMea as u8], &mut data)
+            .await
+            .map_err(DHT22Error::I2C)
     }
 }

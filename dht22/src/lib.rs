@@ -3,7 +3,6 @@
 #![deny(missing_docs)]
 #![deny(unsafe_code)]
 
-mod address;
 mod chip_info;
 mod device;
 mod error;
