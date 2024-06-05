@@ -18,7 +18,6 @@ The following features are available:
 
 The following crate [feature flags](https://doc.rust-lang.org/cargo/reference/features.html#the-features-section) are available:
 
-- `async`: enables asynchronous functionality.
 - `log`: enables debug logging using the `log` crate.
 - `defmt`: enables debug logging using the `defmt` crate.
 - `impl-debug`: implements `core::fmt::Debug` for structs and enums.

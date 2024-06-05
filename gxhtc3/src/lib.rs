@@ -3,9 +3,8 @@
 #![deny(missing_docs)]
 #![deny(unsafe_code)]
 
-mod address;
+mod chip_info;
 mod error;
-mod register;
 
 pub use crate::address::Address;
 pub use crate::error::Error;

@@ -51,6 +51,7 @@ name = "dht22"
 version = "0.1.0"
 dependencies = [
  "defmt",
+ "embedded-hal",
  "embedded-hal-async",
  "log",
 ]
